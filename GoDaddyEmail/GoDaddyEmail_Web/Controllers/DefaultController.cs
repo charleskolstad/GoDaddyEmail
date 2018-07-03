@@ -16,6 +16,7 @@ namespace GoDaddyEmail_Web.Controllers
             return View();
         }
 
+        [HttpPost]
         public ActionResult Index(ContactModel model)
         {
             string errorMessage = string.Empty;
