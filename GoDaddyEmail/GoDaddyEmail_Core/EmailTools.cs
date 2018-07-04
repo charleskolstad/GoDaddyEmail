@@ -16,7 +16,7 @@ namespace GoDaddyEmail_Core
             {
                 using (MailMessage message = new MailMessage())
                 {
-                    message.From = new MailAddress("charlespkolstad@202mobileservice.com");
+                    message.From = new MailAddress("");
                     message.To.Add(new MailAddress(to));
                     message.Subject = "New email message";
                     message.Body = body;
@@ -26,7 +26,7 @@ namespace GoDaddyEmail_Core
                     using (SmtpClient client = new SmtpClient("relay-hosting.secureserver.net", 587))
                     {
                         client.EnableSsl = false;
-                        client.Credentials = new NetworkCredential("charlespkolstad@202mobileservice.com", "Email123Pass!");
+                        client.Credentials = new NetworkCredential("", "");
                         client.Port = 25;
                         client.Send(message);
                     }
